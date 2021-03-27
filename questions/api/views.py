@@ -44,11 +44,6 @@ class AnswerListAPIView(generics.ListAPIView):
         return Answer.objects.filter(question__slug=kwarg_slug).order_by("-created_at")
 
 class AnswerRUDAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Answer.objects.all()
-    serializer_class = AnswerSerializer
-    permission_classes = [IsAuthenticated, IsAuthorOrReadOnly]
-
-class AnswerRUDAPIView(generics.RetrieveUpdateDestroyAPIView):
     """Provide *RUD functionality for an answer instance to it's author."""
     queryset = Answer.objects.all()
     serializer_class = AnswerSerializer
