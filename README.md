@@ -15,8 +15,6 @@ python3 -m venv venv
 ```
 source ./venv/bin/activate 
 ```
-
-Иначе:
 ```
 pip install -m ./r.txt
 ```
